@@ -13,17 +13,24 @@
     <header>
     <div id="header">
         <div id="Intro">Xheikh Talha</div>
+        <button id="menu-toggle" class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div id="navbar">
             <nav>
                 <ul>
                     <li><a href="#about">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </div>
+
     </header>
 
 <main>
@@ -149,5 +156,25 @@
     </section>
     </footer>
 
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    menuToggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+
+        const isOpen = navbar.classList.contains("active");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    navbar.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            navbar.classList.remove("active");
+            menuToggle.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+        });
+    });
+</script>
 </body>
 </html>
