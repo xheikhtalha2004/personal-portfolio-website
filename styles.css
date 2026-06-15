@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+        font-family: "JetBrains Mono", monospace;
+        background-color: #fdfaf5;
+        color: #333;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: center;    
+    gap: 10px;
+    font-weight: bold;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #8a5a44;
+}
+
+main {
+    width: 96%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+section {
+    padding: 30px 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: bold;
+}
+
+#header {
+    background-color: #eae4e1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 96%;
+    max-width: 1400px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+#navbar {
+    min-width: 0;
+}
+
+#Intro {
+    text-align: center;
+    font-size: 1.3rem;
+    color:#333;
+    font-weight: bold;
+}
+
+#about {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 30px;
+}
+
+#name_style {
+    color: #eae4e1;
+    background-color: #333;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+#about_content {
+    font-size: 1.15rem;
+    width: 55%;
+}
+
+#about_image {
+    width: 35%;
+}
+
+#profile_image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#projects {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project {
+    background-color: #eae4e1;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.project_content {
+    width: 30%;
+}
+
+.project_content p {
+    margin-bottom: 15px;
+}
+
+.project_content a {
+    color: #333;
+    font-weight: bold;
+}
+
+.project_website_wrapper {
+    width: 70%;
+    height: 550px;
+    min-height: 550px;
+    background-color: #fff;
+    border: 2px solid #d8cfca;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project_website {
+    width: 139%;
+    height: 760px;
+    transform: scale(0.72);
+    transform-origin: top left;
+    border: 0;
+}
+
+#contact {
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    #header,
+    #about,
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #header {
+        justify-content: center;
+    }
+
+    #about_content,
+    #about_image,
+    .project_content,
+    .project_website_wrapper {
+        width: 100%;
+    }
+
+    .project_website_wrapper,
+    .project_website {
+        height: 420px;
+        min-height: 420px;
+    }
+
+    .project_website {
+        width: 139%;
+        height: 580px;
+    }
+}
+
+#skills_table {
+    border-style: inset;
+    width: 100%;
+    /* border-collapse: collapse; */
+    margin-top: 20px;
+}
+
+th {
+    border-style: inset;
+    padding: 8px;
+    background-color: #eae4e1;
+    width: 30%;
+}
+
+td {
+    border-style: inset;
+    padding: 8px;
+}
+
+.skill_logos {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.skill_logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.skill_logo img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+#contact {
+    background-color: #eae4e1;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+#contact_links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#contact_links a img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
